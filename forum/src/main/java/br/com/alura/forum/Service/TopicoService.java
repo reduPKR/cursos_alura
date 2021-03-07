@@ -1,6 +1,6 @@
-package br.com.alura.forum.Service;
+package br.com.alura.forum.service;
 
-import br.com.alura.forum.TopicoRepository;
+import br.com.alura.forum.repository.TopicoRepository;
 import br.com.alura.forum.model.Topico;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,5 +18,9 @@ public class TopicoService {
 
     public List<Topico> findByCursoNome(String cursoNome) {
         return repository.findByCursoNome(cursoNome);
+    }
+
+    public void save(Topico topico) {
+        repository.save(topico);
     }
 }
