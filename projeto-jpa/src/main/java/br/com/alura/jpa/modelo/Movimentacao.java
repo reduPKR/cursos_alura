@@ -74,6 +74,15 @@ public class Movimentacao {
         return categorias;
     }
 
+    public String getCategoriasTexto() {
+        String saida = "";
+
+        for (Categoria item: categorias) {
+            saida += "\n"+item.getNome();
+        }
+        return saida;
+    }
+
     public void setCategorias(List<Categoria> categorias) {
         this.categorias = categorias;
     }
