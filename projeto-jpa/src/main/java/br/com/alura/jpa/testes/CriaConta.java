@@ -23,5 +23,6 @@ public class CriaConta {
         em.getTransaction().begin();
         em.persist(conta);
         em.getTransaction().commit();
+        em.close();
     }
 }

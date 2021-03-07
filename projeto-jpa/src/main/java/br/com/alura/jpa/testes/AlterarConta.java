@@ -22,5 +22,6 @@ public class AlterarConta {
         em.getTransaction().begin();
         em.persist(conta);
         em.getTransaction().commit();
+        em.close();
     }
 }
