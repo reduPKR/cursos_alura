@@ -7,8 +7,12 @@ import br.com.alura.forum.service.CursoService;
 import br.com.alura.forum.service.TopicoService;
 import br.com.alura.forum.form.TopicoForm;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.util.UriComponentsBuilder;
 
+import javax.validation.Valid;
+import java.net.URI;
 import java.util.List;
 
 @RestController
@@ -29,9 +33,12 @@ public class TopicosController {
     }
 
     @PostMapping
-    public void cadastrar(@RequestBody TopicoForm topicoForm){
-        Curso curso = cursoService.findByName(topicoForm.getNomeCurso());
+    public ResponseEntity<TopicoDTO> cadastrar(@Valid @RequestBody TopicoForm topicoForm, UriComponentsBuilder uriComponentsBuilder){
+        Curso curso = cursoService.findByNome(topicoForm.getNomeCurso());
         Topico topico = topicoForm.conveter(curso);
         topicoService.save(topico);
+
+        URI uri = uriComponentsBuilder.path("/topicos/{id}").buildAndExpand(topico.getId()).toUri();
+        return ResponseEntity.created(uri).body(new TopicoDTO(topico));
     }
 }

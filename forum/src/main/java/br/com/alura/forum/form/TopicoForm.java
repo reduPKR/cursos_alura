@@ -3,9 +3,21 @@ package br.com.alura.forum.form;
 import br.com.alura.forum.model.Curso;
 import br.com.alura.forum.model.Topico;
 
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 public class TopicoForm {
+    @NotNull
+    @NotEmpty
+    @Size(min = 5)
     private String titulo;
+    @NotNull
+    @NotEmpty
+    @Size(min = 5)
     private String mensagem;
+    @NotNull
+    @NotEmpty
     private String nomeCurso;
 
     public String getTitulo() {
