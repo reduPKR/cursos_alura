@@ -1,14 +1,14 @@
 package br.com.alura.forum.form;
 
-import br.com.alura.forum.model.Curso;
 import br.com.alura.forum.model.Topico;
-import br.com.alura.forum.service.CursoService;
+import br.com.alura.forum.service.TopicoService;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-public class TopicoForm {
+public class AtualizacaoTopicoForm {
+    /*Nescessaria pois nem tudo pode ser atualizado.*/
     @NotNull
     @NotEmpty
     @Size(min = 5)
@@ -17,9 +17,6 @@ public class TopicoForm {
     @NotEmpty
     @Size(min = 5)
     private String mensagem;
-    @NotNull
-    @NotEmpty
-    private String nomeCurso;
 
     public String getTitulo() {
         return titulo;
@@ -37,16 +34,12 @@ public class TopicoForm {
         this.mensagem = mensagem;
     }
 
-    public String getNomeCurso() {
-        return nomeCurso;
-    }
+    public Topico atualizar(long id, TopicoService topicoService) {
+        Topico topico = topicoService.findById(id);
 
-    public void setNomeCurso(String nomeCurso) {
-        this.nomeCurso = nomeCurso;
-    }
+        topico.setTitulo(titulo);
+        topico.setMensagem(mensagem);
 
-    public Topico conveter(CursoService cursoService) {
-        Curso curso = cursoService.findByNome(nomeCurso);
-        return new Topico(titulo, mensagem, curso);
+        return topico;
     }
 }
