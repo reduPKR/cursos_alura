@@ -5,6 +5,8 @@ import br.com.alura.forum.dto.TopicoDTO;
 import br.com.alura.forum.repository.TopicoRepository;
 import br.com.alura.forum.model.Topico;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -16,12 +18,12 @@ public class TopicoService {
     @Autowired
     private TopicoRepository repository;
 
-    public List<Topico> findAll() {
-        return repository.findAll();
+    public Page<Topico> findAll(Pageable pageable) {
+        return repository.findAll(pageable);
     }
 
-    public List<Topico> findByCursoNome(String cursoNome) {
-        return repository.findByCursoNome(cursoNome);
+    public Page<Topico> findByCursoNome(String cursoNome, Pageable pageable) {
+        return repository.findByCursoNome(cursoNome, pageable);
     }
 
     public void save(Topico topico) {
