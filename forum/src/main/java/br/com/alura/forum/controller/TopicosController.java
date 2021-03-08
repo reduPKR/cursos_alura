@@ -36,7 +36,7 @@ public class TopicosController {
     }
 
     @GetMapping("/{id}")
-    public DetalhesTopicoDTO detalhar(@PathVariable Long id){
+    public ResponseEntity<DetalhesTopicoDTO> detalhar(@PathVariable Long id){
         return topicoService.findDetailById(id);
     }
 

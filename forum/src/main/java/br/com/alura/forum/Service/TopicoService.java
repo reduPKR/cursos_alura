@@ -5,6 +5,7 @@ import br.com.alura.forum.dto.TopicoDTO;
 import br.com.alura.forum.repository.TopicoRepository;
 import br.com.alura.forum.model.Topico;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -27,11 +28,11 @@ public class TopicoService {
         repository.save(topico);
     }
 
-    public DetalhesTopicoDTO findDetailById(Long id) {
+    public ResponseEntity<DetalhesTopicoDTO> findDetailById(Long id) {
         Optional<Topico> topico = repository.findById(id);
         if(topico.isPresent())
-            return new DetalhesTopicoDTO(topico.get());
-        return null;
+            return ResponseEntity.ok(new DetalhesTopicoDTO(topico.get()));
+        return ResponseEntity.notFound().build();
     }
 
     public Topico findById(Long id) {
