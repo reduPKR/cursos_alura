@@ -50,6 +50,7 @@ public class SecurityConfigurations extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.GET,"/topicos/*").permitAll()
                 .antMatchers(HttpMethod.POST,"/auth").permitAll()
                 .antMatchers(HttpMethod.GET,"/actuator/**").permitAll()//Para produção nao pode ser all
+                .antMatchers(HttpMethod.DELETE, "/topicos/*").hasRole("ADMIN")//Somente quem for adm pode excluir algo
                 .anyRequest().authenticated()
                 .and().csrf().disable()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
@@ -66,6 +67,8 @@ public class SecurityConfigurations extends WebSecurityConfigurerAdapter {
                         "/v2/api-docs",
                         "/webjars/**",
                         "/configuration/**",
-                        "/swagger-resources/**");
+                        "/swagger-resources/**",
+                        "/h2-console",
+                        "/h2-console/*");
     }
 }
