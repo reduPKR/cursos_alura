@@ -2,7 +2,7 @@ INSERT INTO USUARIO(nome, email, senha) VALUES('Aluno', 'aluno@email.com', '$2a$
 INSERT INTO USUARIO(nome, email, senha) VALUES('Rafael', 'rafael@email.com', '$2a$10$AfUz24e7keMIcWy.KjVoze.hAzF4xGhd.nW222AVpk58MX0vyugsO');
 
 INSERT INTO PERFIL(id,nome) VALUES(1, 'ROLE_ALUNO');
-INSERT INTO PERFIL(id,nome) VALUES(2, 'ROLE_ADMIN');
+INSERT INTO PERFIL(id,nome) VALUES(2, 'ROLE_MODERADOR');
 
 INSERT INTO USUARIO_PERFIS(usuario_id,perfis_id) VALUES(1, 1);
 INSERT INTO USUARIO_PERFIS(usuario_id,perfis_id) VALUES(2, 2);
