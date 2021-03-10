@@ -3,6 +3,7 @@ package br.com.alura.forum.dto;
 import br.com.alura.forum.model.Topico;
 import org.springframework.data.domain.Page;
 
+import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
