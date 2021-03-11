@@ -19,7 +19,7 @@ import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/auth")
-@Profile("prod")
+@Profile(value = {"prod", "test"})//pode ser carregada em 2 profiles
 public class AutenticacaoController {
     @Autowired
     private AuthenticationManager authenticationManager;
