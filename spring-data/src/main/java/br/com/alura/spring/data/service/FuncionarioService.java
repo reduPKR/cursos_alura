@@ -4,9 +4,12 @@ import br.com.alura.spring.data.orm.Funcionario;
 import br.com.alura.spring.data.orm.UnidadeTrabalho;
 import br.com.alura.spring.data.repository.FuncionarioRepository;
 import br.com.alura.spring.data.repository.UnidadeTrabalhoRepository;
+import br.com.alura.spring.data.specification.FuncionarioSpecification;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
 
@@ -118,6 +121,12 @@ public class FuncionarioService {
             System.out.println("Registro atualizado");
         }else
             System.out.println("funcionario nao encontrado");
+    }
+
+    public  void vilusualizarComLike(){
+        String nome = "fae";
+        List<Funcionario> funcionarios = funcionarioRepository.findAll(
+          Specification.where(FuncionarioSpecification.likeNome(nome)));
     }
 
     public void visualizar(Scanner scanner) {
