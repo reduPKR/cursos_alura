@@ -94,6 +94,8 @@
 	</dependencies>
 
 	<build>
+<!--Caso nao coloque aqui o nome final é o da version-->
+		<finalName>forum</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
