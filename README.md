@@ -9,4 +9,5 @@
 #### SOLID nova versao -> rh_alura_solid  
 #### SOLID versao antiga -> calculo SRP 
 #### SOLID versao antiga -> geradorNotaFiscal acoplamento   
-#### SOLID versao antiga -> entregas OCP e DIP
+#### SOLID versao antiga -> entregas OCP e DIP  
+#### SOLID versao antiga -> boletos encapsulamento  
