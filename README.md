@@ -7,4 +7,5 @@
 #### Spring boot 3 -> Profile, teste e deploy  
 #### Spring Data -> Revisao JPA pura (Sem REST)  
 #### SOLID nova versao -> rh_alura_solid  
-#### SOLID versao antiga -> calculo
+#### SOLID versao antiga -> calculo coesao
+#### SOLID versao antiga -> geradorNotaFiscal acoplamento
