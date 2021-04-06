@@ -13,4 +13,5 @@
 #### SOLID versao antiga -> boletos encapsulamento  
 #### SOLID versao antiga -> investimentos liskov  
 #### Docker volumes -> volume-docker  
+#### Docker compose -> alura-docker-cap06
 
