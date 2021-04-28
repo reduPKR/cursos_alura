@@ -13,7 +13,7 @@ public class NewOrderMain {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
                          //KafkaProducer<Key, Value> -> do metodo properties
         var producer = new KafkaProducer<String,String>(properties());
-        String value = "123,456,789";//Por ser teste vai representar a chave e o valor
+        String value = "1234,4567,7890";//Por ser teste vai representar a chave e o valor
 
         //var record = new ProducerRecord<String, String>("ECOMMERCE_NEW_ORDER",value,value);
         var record = new ProducerRecord<>("ECOMMERCE_NEW_ORDER",value,value);//Ele idendifica que sao duas strings por isso n escrevi
@@ -27,8 +27,6 @@ public class NewOrderMain {
             }
             System.out.println("Sucesso\n"+data.topic()+"\n"+data.partition()+"\n"+data.offset()+"\n"+data.timestamp());
         }).get();//Alem de esperar a resposta eu quero exibir o resultado.
-
-
     }
 
     private static Properties properties() {
