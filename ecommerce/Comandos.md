@@ -6,5 +6,8 @@ bin\windows\kafka-topics.bat --alter --zookeeper localhost:2181 --topic ECOMMERC
 #### Exibir dados dos grupos  
 bin\windows\kafka-consumer-groups.bat --all-groups --bootstrap-server localhost:9092 --describe  
 #### Exibir topicos  
-bin\windows\kafka-topics.bat --list --bootstrap-server localhost:9092  
+bin\windows\kafka-topics.bat --list --bootstrap-server localhost:9092    
+#### Listar com descrição  
+bin\windows\kafka-topics.bat --describe --bootstrap-server localhost:9092  
+
 
