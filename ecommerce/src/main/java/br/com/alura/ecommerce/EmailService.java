@@ -3,11 +3,16 @@ package br.com.alura.ecommerce;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 
 import java.io.IOException;
+import java.util.HashMap;
 
 public class EmailService {
     public static void main(String[] args) throws IOException {
         var emailService = new EmailService();
-        try(var service = new KafkaService(EmailService.class.getSimpleName(),"ECOMMERCE_SEND_EMAIL",emailService::parse)){
+        try(var service = new KafkaService(EmailService.class.getSimpleName(),
+                "ECOMMERCE_SEND_EMAIL",
+                emailService::parse,
+                String.class,
+                new HashMap<String,String>())){
             service.run();
         }
     }
