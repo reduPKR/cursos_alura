@@ -15,5 +15,11 @@
 #### Docker volumes -> volume-docker  
 #### Docker compose -> alura-docker-cap06  
 #### Kafka -> ecommerce  
-
-
+#### Kotlin  
+- [X] Primeiros passos e OOP  
+- [ ] Herança, polimorfismo e interface  
+- [ ] Recursos da linguagem com pacotes e composição  
+- [ ] Lidando com exceptions e referências nulas  
+- [ ] Desenvolva com coleções, arrays e listas  
+- [ ] Collections: Set e Map  
+- [ ] Recursos do paradigma funcional  
