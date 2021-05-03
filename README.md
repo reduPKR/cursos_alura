@@ -16,8 +16,8 @@
 #### Docker compose -> alura-docker-cap06  
 #### Kafka -> ecommerce  
 #### Kotlin  
-- [X] Primeiros passos e OOP  
-- [ ] Herança, polimorfismo e interface  
+- [X] Primeiros passos e OOP -> Bytebank  
+- [X] Herança, polimorfismo e interface -> Bytebank 2  
 - [ ] Recursos da linguagem com pacotes e composição  
 - [ ] Lidando com exceptions e referências nulas  
 - [ ] Desenvolva com coleções, arrays e listas  
