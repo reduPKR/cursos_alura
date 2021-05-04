@@ -19,7 +19,7 @@
 - [X] Primeiros passos e OOP -> Bytebank  
 - [X] Herança, polimorfismo e interface -> Bytebank 2  
 - [X] Recursos da linguagem com pacotes e composição -> Bytebank 3   
-- [ ] Lidando com exceptions e referências nulas  
+- [X] Lidando com exceptions e referências nulas  
 - [ ] Desenvolva com coleções, arrays e listas  
 - [ ] Collections: Set e Map  
 - [ ] Recursos do paradigma funcional  
