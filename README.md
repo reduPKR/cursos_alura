@@ -20,6 +20,6 @@
 - [X] Herança, polimorfismo e interface -> Bytebank 2  
 - [X] Recursos da linguagem com pacotes e composição -> Bytebank 3   
 - [X] Lidando com exceptions e referências nulas-> Bytebank 4  
-- [ ] Desenvolva com coleções, arrays e listas -> Coleções  
+- [X] Desenvolva com coleções, arrays e listas -> Coleções  
 - [ ] Collections: Set e Map  
 - [ ] Recursos do paradigma funcional  
