@@ -22,4 +22,5 @@
 - [X] Lidando com exceptions e referências nulas-> Bytebank 4  
 - [X] Desenvolva com coleções, arrays e listas -> Coleções  
 - [X] Collections: Set e Map  
-- [ ] Recursos do paradigma funcional  
+- [X] Recursos do paradigma funcional  
+  
