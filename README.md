@@ -21,5 +21,5 @@
 - [X] Recursos da linguagem com pacotes e composição -> Bytebank 3   
 - [X] Lidando com exceptions e referências nulas-> Bytebank 4  
 - [X] Desenvolva com coleções, arrays e listas -> Coleções  
-- [ ] Collections: Set e Map  
+- [X] Collections: Set e Map  
 - [ ] Recursos do paradigma funcional  
